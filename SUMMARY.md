@@ -1,9 +1,25 @@
 # Summary
 
-## Overview
 
-* [My Awesome API](README.md)
-
-## Methods
-
-* [Defining Methods](methods.md)
+* [Deel 1](cursus/README.md)
+    * [Onderwerp en doel](cursus/h1.md)
+    * [Efficiëntie van algoritmen](cursus/h2.md)
+* [Deel 2](cursus/deel2.md)
+    * [Inleiding](cursus/deel2inl.md)
+    * [Eenvoudige methodes](cursus/h3.md)
+    * [Efficiënte methodes](cursus/h4.md)
+    * [Speciale methodes](cursus/h5.md)
+    * [Selectie-operatie](cursus/h6.md)
+    * [Uitwendig rangschikken](cursus/h7.md)
+* [Deel 3](cursus/deel3.md)
+    * [Inleiding](cursus/deel3inl.md)
+    * [Containers](cursus/h8.md)
+    * [Eenvoudige woordenboeken](cursus/h9.md)
+    * [Hashtabellen](cursus/h10.md)
+    * [Binaire zoekboemen](cursus/h11.md)
+* [Deel 4](cursus/deel4.md)
+    * [Inleiding](cursus/deel4inl.md)
+    * [Minimale overspannende bomen](cursus/h12.md)
+    * [Korste afstanden I](cursus/h13.md)
+    * [Gerichte lusloze graven](cursus/h14.md)
+* [Own Overview](self/README.md)
