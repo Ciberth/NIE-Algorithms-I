@@ -295,3 +295,124 @@ void dualPivot(vector<T> &v) {
 
 ```
 
+## Mergesort 
+
+### Attributes:
+
+- **Worst-case:** O(n log n)
+- **Best-case:** O(n log n)
+- **Average-case:** O(n log n)
+
+### Key conceptual elements & notes:
+
+- Recursion
+
+
+```cpp
+
+template <class T>
+void merge(vector<T> & from, int begin, int mid, int end, vector<T> & temp) {
+
+    int i=begin;
+    int left=begin;
+    int right=mid+1;
+
+    while(left <= mid && right <= end) {
+        temp[i++] = move(from[left] < from[right] ? from[left++] : from[right++]);
+    }
+
+    while(left <= mid) {
+        temp[i++] = move(from[left++]);
+    }
+
+    while(right <= end) {
+        temp[i++] = move(from[right++]);
+    }
+
+    for(int j = begin ; j <= end ; j++) {
+        from[j] = move(temp[j]);
+    }
+
+}
+
+
+template <class T>
+void mergeSort(vector<T> &v, int l, int r, vector<T> & temp) {
+    if (l < r-1) {
+        int m = l+(r-l)/2;
+        mergeSort(v, l, m, temp);
+        mergeSort(v, m+1, r, temp);
+        merge(v, l, m, r, temp);
+    }
+}
+
+template <class T>
+void mergeSort(vector<T> &v) {
+
+    vector<int> temp(v);
+    mergeSort(v, 0, v.size()-1, temp);
+
+}
+
+
+
+```
+
+
+## Countingsort 
+
+### Attributes:
+
+- **Worst-case:** 
+- **Best-case:** 
+- **Average-case:** 
+
+### Key conceptual elements & notes:
+
+- Cummulative tabel
+- We assume ints in this example 
+- Theta(n+k) with n elements and k different keys
+
+```cpp 
+
+
+template <class T>
+void countingSort(vector<T> &v) {
+    
+    int max = v[0];
+
+    for(int i=1; i<v.size(); i++) {
+        if(max < v[i])
+            max = v[i];
+    }
+    
+    vector<T> freq(max+1, 0);
+
+    for(int i=0; i<v.size(); i++) {
+        freq[v[i]]++;
+    }
+
+    // make cummulative
+    for(int i=0; i<freq.size(); i++) {
+        freq[i] += freq[i-1];
+    }
+
+    vector<T> sorted(v.size(), 0);
+
+    for(int i=v.size()-1; i>=0; i--) {
+         sorted[freq[v[i]]-1] = move(v[i]); // hier min 1!
+        freq[v[i]]--;
+    }
+
+    v = move(sorted);
+
+}
+
+```
+
+
+TODO 
+
+LSD
+MSD
+BOTTOM UP MERGESORT 
