@@ -85,14 +85,15 @@ void insertionSort(vector<T> &v) {
 
 ### Attributes:
 
-- **Worst-case:** O(n log n) comparisons, swaps
-- **Best-case:** O(n log n) comparisons, O(1) swaps
+- **Worst-case:** O(n log n)
+- **Best-case:** O(n log n) 
 - **Average-case:** depends on gap sequence 
 
 ### Key conceptual elements & notes:
 
-- shell = insertionSort with increments 
 - while in a for in a while
+- shell = insertionSort with increments 
+
 
 
 ```cpp
@@ -117,6 +118,96 @@ void shellSort(vector<T> &v) {
         }
         k = increments[++inc]; // next increment
     }
+}
+
+
+```
+
+
+## Selection Sort 
+
+### Attributes:
+
+- **Worst-case:** O(n²)
+- **Best-case:** O(n²)
+- **Average-case:** O(n²)
+
+### Key conceptual elements & notes:
+
+- for in a for and swap
+- search largest (or smallest) and swap 
+
+
+
+```cpp
+
+template <class T>
+void selectionSort(vector<T> &v) {
+
+    for(int i=v.size()-1 ; i > 0 ; i--) {
+        int imax = i;
+        for(int j = 0 ; j < i ; j++) {
+            if (v[j]> v[imax])
+                imax = j;
+        }
+        swap(v[i], v[imax]);
+    }
+}
+
+```
+
+
+## Quicksort 
+
+### Attributes:
+
+- **Worst-case:** O(n²)
+- **Best-case:** O(n log n) (not that this is NOT a three-way partition with equal keys but rather the default quicksort)
+- **Average-case:** O(n log n)
+
+### Key conceptual elements & notes:
+
+- dual while and a swap in a while next to a while in an if + recursion
+- make pivot and check pivot increase/decrease pointers and recursion
+
+
+```cpp
+
+template <class T>
+void quickSort(vector<T> &v, int l, int r) {
+
+    if(l<r){
+
+        T pivot = v[l];
+        int i = l;
+        int j = r;
+
+        while(v[j] > pivot)
+            j--;
+        
+        while(i < j) {
+            swap(v[i], v[j]);
+            i++;
+
+            while(v[i] < pivot)
+                i++;
+            
+            j--;
+            while(v[j] > pivot)
+                j--;
+            
+        }
+
+        quickSort(v, l, j);
+        quickSort(v, j+1, r);
+
+    }
+
+}
+
+template <class T>
+void quickSort(vector<T> &v) {
+    quickSort(v, 0, v.size()-1);
 }
 
 
