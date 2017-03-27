@@ -219,6 +219,7 @@ void quickSort(vector<T> &v) {
 
 ```cpp 
 
+
 template <class T>
 void dualPivot(vector<T> &v, int l, int r) {
 
@@ -228,10 +229,8 @@ void dualPivot(vector<T> &v, int l, int r) {
         T p2 = v[r];
 
         if(p1 > p2) {
-            v[l] = move(p2);
-            v[r] = move(p1);
-            p1 = v[l];
-            p2 = v[r];
+            
+            swap(v[l], v[r]);
         }
 
         int k = l + 1;
@@ -241,27 +240,27 @@ void dualPivot(vector<T> &v, int l, int r) {
         while (m <= g) {
 
             if(v[m] < p1) {
-                T temp = move(v[k]);
-                v[k] = move(v[m]);
-                v[m] = move(temp);
+                
+                swap(v[k], v[m]);
                 k++;
             } else if (v[m] >= p2) {
-
+                
                 while(v[g] > p2 && m < g) {
+                    cout << "vg is " << v[g] << " en m is " << m << " pivots zijn " << p2 << " en " << p1 << endl;
                     g--;
                 }
-
-                T temp = move(v[g]);
-                v[g] = move(v[m]);
-                v[m] = move(temp);
+                
+                swap(v[g], v[m]);
                 g--;
-
+                
                 if(v[m] < p1) {
-                    T temp = move(v[m]);
-                    v[m] = move(v[k]);
-                    v[k] = temp;
+                    
+                    swap(v[m], v[k]);
+                    // swap is waardeloos alle elementen zijn gelijk die in de if komen
+                    
                     k++;
                 }
+                
             }
             m++;
         }
@@ -269,14 +268,8 @@ void dualPivot(vector<T> &v, int l, int r) {
         k = k - 1;
 		g = g + 1;
 		
-		T temp = move(v[k]);
-		v[k] = move(v[l]);
-		v[l] = move(temp);
-
-		temp = move(v[g]);
-		v[g] = move(v[r]);
-		v[r] = move(temp);
-
+        swap(v[k], v[l]);
+        swap(v[g], v[r]);
 
 		dualPivot(v, l, k-1);
 		dualPivot(v, k+1, g-1);
@@ -290,6 +283,7 @@ template <class T>
 void dualPivot(vector<T> &v) {
     dualPivot(v, 0, v.size()-1);
 }
+
 
 
 

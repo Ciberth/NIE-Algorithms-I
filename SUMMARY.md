@@ -29,3 +29,4 @@
     * [Merges](nathan/merges.md)
     * [Quicksort](nathan/quicksort.md)
     * [Radix](nathan/radix.md)
+    * [Count](nathan/count.md)
