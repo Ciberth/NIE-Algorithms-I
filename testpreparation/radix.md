@@ -3,6 +3,60 @@
 ## Binaire quicksort (= radix-exchange sort)
 
 ```cpp
+template<class T>
+void radixsort_binair(vector<T> &v, int l, int r, int bin){
+    if(l < r && bin){
+
+        int i = l;
+        int j = r;
+
+        while(!(v[i] & bin))
+            i++;
+
+        while(v[j] & bin)
+            j--;
+
+        while(i < j){
+            swap(v[i], v[j]);
+            i++;
+            j--;
+
+            while(!(v[i] & bin))
+                i++;
+
+            while(v[j] & bin)
+                j--;
+        }
+
+        bin = bin >> 1; 
+
+        radixsort_binair(v, l, j, bin);
+        radixsort_binair(v, j+1, r, bin);
+
+    }
+}
+
+template<class T>
+void radixsort_binair(vector<T> &v){
+    // max bepalen
+    int imax = 0;
+    for(int i=1; i<v.size(); i++){         // i=1
+        if(v[i] > v[imax]){
+            imax = i;
+        }
+    }
+
+    // binair patroon bepalen
+    int bin = 1;
+    while(bin < v[imax])
+        bin = bin << 1;     // shift left
+
+    bin = bin >> 1;         // één teveel
+
+    radixsort_binair(v, 0, v.size()-1, bin);
+}
+
+
 
 
 ```
