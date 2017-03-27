@@ -219,7 +219,6 @@ void quickSort(vector<T> &v) {
 
 ```cpp 
 
-
 template <class T>
 void dualPivot(vector<T> &v, int l, int r) {
 
@@ -237,43 +236,26 @@ void dualPivot(vector<T> &v, int l, int r) {
         int g = r - 1;
         int m = k;
 
-        while (m <= g) {
-
-            if(v[m] < p1) {
-                
-                swap(v[k], v[m]);
+        while(m<=g){
+            
+            if(v[m] < p1){
+                swap(v[m], v[k]);
+                m++;
                 k++;
-            } else if (v[m] >= p2) {
-                
-                while(v[g] > p2 && m < g) {
-                    cout << "vg is " << v[g] << " en m is " << m << " pivots zijn " << p2 << " en " << p1 << endl;
-                    g--;
-                }
-                
-                swap(v[g], v[m]);
+            } else if (v[m] > p2){
+                swap(v[m], v[g]);
                 g--;
-                
-                if(v[m] < p1) {
-                    
-                    swap(v[m], v[k]);
-                    // swap is waardeloos alle elementen zijn gelijk die in de if komen
-                    
-                    k++;
-                }
-                
+            } else {
+                m++;
             }
-            m++;
         }
 
-        k = k - 1;
-		g = g + 1;
-		
-        swap(v[k], v[l]);
-        swap(v[g], v[r]);
-
-		dualPivot(v, l, k-1);
-		dualPivot(v, k+1, g-1);
-		dualPivot(v, g+1, r);
+        swap(v[l], v[k-1]);
+        swap(v[r], v[g+1]);
+                
+        dualPivot(v, l, k-1);
+        dualPivot(v, k, m-1);
+        dualPivot(v, m, r);
 
     }
 
@@ -283,7 +265,6 @@ template <class T>
 void dualPivot(vector<T> &v) {
     dualPivot(v, 0, v.size()-1);
 }
-
 
 
 
