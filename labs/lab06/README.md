@@ -30,13 +30,13 @@ Doe nu het zelfde met dorp2.xml. Gebruik ook een programma dat, bij het DE-overl
 
 ## Files
 
-- [dorp.xml]()
-- [pugixml.hpp]()
-- [pugixml.hpp]()
-- [pugixml.cpp]()
-- [dorp2.xml]()
-- [leesvoorbeeld.cpp]()
-- [treingraaf.xml]()
+- [dorp.xml](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab06/dorp.xml)
+- [pugixml.hpp](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab06/pugixml.hpp)
+- [pugiconfig.hpp](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab06/pugiconfig.hpp)
+- [pugixml.cpp](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab06/pugixml.cpp)
+- [dorp2.xml](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab06/dorp2.xml)
+- [leesvoorbeeld.cpp](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab06/leesvoorbeeld.cpp)
+- [treingraaf.xml](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab06/trejngraaf.xml)
 
 ## Opmerkingen
 

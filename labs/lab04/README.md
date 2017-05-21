@@ -19,9 +19,9 @@ Im DE.h vind je code voor diepte-eerst bezoek.
 
 ## Files
 
-- [jacht]()
-- [binboom.h]()
-- [DE.h]()
+- [jacht](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab04/jacht)
+- [binboom.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab04/binboom.h)
+- [DE.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab04/DE.h)
 
 ## Opmerkingen
 

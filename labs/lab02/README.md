@@ -98,11 +98,11 @@ Zoek een betere methode. Het kan in O(n log(n)). Tip: als je in mergesort stopt 
 
 ## Files
 
-- [sorteermethode.h]()
-- [sortvector.h]()
-- [chrono.h]()
-- [csv.h]()
-- [intstring.h]()
+- [sorteermethode.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab02/Sorteermethode.h)
+- [sortvector.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab02/sortvector.h)
+- [chrono.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab02/chrono.h)
+- [csv.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab02/csv.h)
+- [intstring.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab02/intstring.h)
 
 
 ## Opmerkingen

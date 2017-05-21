@@ -8,8 +8,8 @@ Gegeven is de tekst van een komedie. Verander de tekst door, als er voor een woo
 
 ## Files
 
-- [woordenlijst.txt]()
-- [TimErwetenKoerst.txt]()
+- [woordenlijst.txt](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab03/woordenlijst.txt)
+- [TimErwetenKoerst.txt](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab03/TimErwetenKoerst.txt)
 
 ## Opmerkingen
 

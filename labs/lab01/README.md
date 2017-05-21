@@ -6,8 +6,8 @@ Je krijgt van ons een testprogrammaatje, lijsttest11.cpp dat oppervlakkig test o
 
 ## Files
 
-- [lijsttest11.cpp]()
-- [lijst11.h]()
+- [lijsttest11.cpp](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab01/lijsttest11.cpp)
+- [lijst11.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab01/lijst11.h)
 
 ## Opmerkingen
 

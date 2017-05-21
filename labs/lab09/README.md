@@ -15,8 +15,8 @@ Gegeven is een positief geheel getal p. De dichtste vriend van a[i] in b.dat, v(
 
 ## Files
 
-- [a.dat]()
-- [b.dat]()
+- [a.dat](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab09/a.dat)
+- [b.dat](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab09/b.dat)
 
 ## Opmerkingen
 

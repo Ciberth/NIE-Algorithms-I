@@ -23,10 +23,10 @@ Breid nu de functie dichtste uit zodat je het _volledige pad_ van start naar de 
 ``std::list Graaf::dichtstePad(int start, const vector& doel)``
 
 ## Files
-- [graaf.h]()
-- [graaf.cpp]()
-- [graafdichtste.dat]()
-- [stopwatch.h]()
+- [graaf.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab08/graaf.h)
+- [graaf.cpp](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab08/graaf.cpp)
+- [graafdichtste.dat](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab08/graafdichtste.dat)
+- [stopwatch.h](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab08/stopwatch.h)
 
 ## Opmerkingen
 

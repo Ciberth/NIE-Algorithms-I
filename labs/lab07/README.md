@@ -48,7 +48,7 @@ uitrekent. Als dit nog altijd slecht is, bedenk dan een goede hashfunctie. Of je
 
 ## Files
 
-- [woordenlijst.txt]()
+- [woordenlijst.txt](https://github.com/Ciberth/NIE-Algorithms-I/blob/master/labs/lab07/woordenlijst.txt)
 
 ## Opmerkingen
 
