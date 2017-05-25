@@ -16,5 +16,8 @@ Hint: een header file.
 
 ## Opmerkingen
 
+- Backtracking: boom afgaan in DEZ. 
+
+- ``vector<bool> mag (10, true)`` en dan bepaalde dingen op false zetten. Vb: ``mag[cijfers-6-naar-links]=false``. Al de voorwaarden zullen bepaalde waarden uitsluiten (false)
 
 

@@ -10,5 +10,13 @@ Gegeven een netwerk in treingraaf.xml. Wat is de kortste weg van gemeenteraadsve
 
 ## Opmerkingen
 
+- Bij het opzoek gaan naar containers, kijk naar de functionaliteit en niet op de onderliggende structuur.
+
+- Set: snel opvolger en voorganger want onderliggend is dit een binaire zoekboom (rood/zwart -> evenwichtig en dit kost tijd)
+
+- Unorderd set: sneller zoeken O(1) want onderliggend een hashtabel (niet evenwichtig)
+
+- Gerichte, gewogen graaf
+
 
 

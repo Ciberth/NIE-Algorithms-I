@@ -52,5 +52,17 @@ uitrekent. Als dit nog altijd slecht is, bedenk dan een goede hashfunctie. Of je
 
 ## Opmerkingen
 
+- **Seperate chaining** 
+
+- Vectoren van lijsten, geen vectoren van sleutels!
+
+```cpp
+template<class T, int (*hashindex)(const T&, int)> // De hashfunctie als parameter opgeven
+class Hashtabel // erft over van vector<list<T>>>
+/*
+
+Vb: Hashtabel<string,slechtehash> tabel(100);
 
 
+*/ 
+```

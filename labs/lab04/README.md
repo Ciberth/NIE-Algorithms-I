@@ -25,5 +25,6 @@ Im DE.h vind je code voor diepte-eerst bezoek.
 
 ## Opmerkingen
 
+- "-1" wil zeggen, er is geen kind.
 
-
+- Per lijn is er een knoop met in de eerste kolom knoopnr, de sleutel, knoopnr van linkerkind, knoopnr van rechterkind

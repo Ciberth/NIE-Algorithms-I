@@ -21,4 +21,12 @@ Gegeven is een positief geheel getal p. De dichtste vriend van a[i] in b.dat, v(
 ## Opmerkingen
 
 
+- Geen duplicaten.
+
+- v(a[i]) = dichtste vriend van a[i] in b.dat.
+
+- Bereken de som van verschillen a[i]-v(a[i]) voor alle i van 0 tot 1 000 000. 
+
+- De bottleneck is hier dus een miljoen keer iets zoeken! 
+
 

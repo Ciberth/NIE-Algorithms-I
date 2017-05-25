@@ -30,5 +30,9 @@ Breid nu de functie dichtste uit zodat je het _volledige pad_ van start naar de 
 
 ## Opmerkingen
 
+- De file graafdichtste.dat heeft een vaste structuur. Op de eerste regel staat het aantal verbindingen en vervolgens telkens (per regel) een verbinding. Van x naar y. De einde van de file heeft een -1 om een stop aan te duiden.
 
+- Maak gebruik van een vector van ints (knoopnrs). De vraag is dan "welke staat het dichtst bij start (opgegeven)".
+
+- 
 

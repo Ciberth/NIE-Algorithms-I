@@ -13,5 +13,15 @@ Gegeven is de tekst van een komedie. Verander de tekst door, als er voor een woo
 
 ## Opmerkingen
 
+- ``vector<pair<string,string>> v;``
 
+- Bij ``v.push_back(a,b)`` ga je alles kopieren.
+
+- Bij ``v.emplace_back(move(a), move(b))`` zijn a en b string &&. Nu zal hij kijken of het move constructoren (&&) heeft.
+
+- Zet de char alfabetisch en gebruik als **fingerprint** van de woorden.
+
+- Een pair wordt lexicografisch gesorteerd.
+
+- Swap **na** for-lus met i.
 

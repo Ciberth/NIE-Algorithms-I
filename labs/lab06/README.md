@@ -41,4 +41,8 @@ Doe nu het zelfde met dorp2.xml. Gebruik ook een programma dat, bij het DE-overl
 ## Opmerkingen
 
 
+- **Placeholder**: slimme pointer, makkelijk te kopiëren, met een . en niet -> (niet zoals pointer), altijd by value, niet als object maar als pointer beschouwen, geheugenbeheer gebeurt intern.
 
+- Als alle xml_nodes worden verwijderd dan is alles automatisch opgeruimd.
+
+ 
