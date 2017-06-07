@@ -58,12 +58,14 @@
 ### Bespreek de prioriteitswachtrij.
 
 ### Bespreek inorder, preorder, postorder overlopen van een graaf met performanties.
+```
 <img src="http://www.geeksforgeeks.org//wp-content/uploads/tree6.png" alt="Binary tree" width="200px"/>
 inorder: 1 - 3 - 4 - 6 - 7 - 8 - 13 - 14 - 10 (left - root - right)
 pre-order: 8 - 3 - 1 - 6 - 4 - 7 - 10 - 14 - 13 (root - left - right)
 post-order: 1 - 4 - 7 - 6 - 13 - 14 - 10 - 8 ( left - right - root)
-
+```
 ### Bespreek BEZ zo uitgebreid mogelijk.
+```
 1.	Kies start vertex S
 2.	Wie is vanaf S bereikbaar (booglengte 1)
 3.	Wie is vanaf die indices bereikbaar (1 voor 1 overlopen)
@@ -79,6 +81,7 @@ Efficiëntie
 	Elke knoop op wachtrij geplaatst en afgehaald, operaties op wachtrij θ(1) dus voor alle knopen samen: θ(n)
 	Alle buren elke knoop overlopen: θ(m) voor lijst, θ(n^2 ) voor burenmatrix
 totaal: θ(n+m)  voor lijst, θ(n^2) voor matrix (hangt af van representatie)
+```
 
 ```cpp
 Breadth-First-Search(Graph, root):
@@ -103,7 +106,8 @@ Breadth-First-Search(Graph, root):
 
 
 ### Bespreek DEZ zo uitgebreid mogelijk. 
-	Kies start vertex S
+```
+Kies start vertex S
 	Bezoek recursief alles dat nog niet bezocht is via buur van S
 	Indien over, kies andere buur
  
@@ -119,6 +123,7 @@ Efficiëntie
 	Van elke knoop alle buren onderzocht: θ(m) voor lijst, θ(n^2 ) voor burenmatrix
 totaal: θ(n+m)  voor lijst, θ(n^2) voor matrix (hangt af van representatie)
 Implementatie
+```
 
 ```cpp
 void behandel_knoop(int i) {
@@ -147,6 +152,7 @@ void diepte_eerst_zoeken() {
 ## H9: Eenvoudige woordenboeken
 
 ### Leg de verschillende mogelijkheden uit.
+```
 Rechstreeks adresseerbare tabel	= Associatieve array
 Alle operaties zijn O(1)
 Ongeordende tabel		Zoeken: volledige tabel doorgaan tot gevonden: O(n)
@@ -169,12 +175,13 @@ Gerangschikte lijst		Zoeken: Geen directe toegang O(n)
 	Toevoegen: sequentieel overlopen vor plaats te lokaliseren O(n)
 	Verwijderen: zelfde als toevoegen O(n)
 
-
+```
 
 ## H10: Hashtabellen
 
 ### Leg de verschillende adresseringsmogelijkheden uit en bespreek + performantie.
 
+```
 Is een datastructuur die keys aan waarden kan linken
 	Voor het opdelen van grote data (vb arrays) in `buckets`
 	Collision: als er waarden zijn met zelfde key
@@ -229,9 +236,10 @@ h(k,i)=(h^' (k)+i)  % m
 
 **Double hashing**	Interval tussen probes is fixed voor elke record maar berekend door een andere hash functie
 (h(s)+ih^' (s))  % m
-
+```
 
 ### Bespreek de hashfuncties.
+
 Bepaalt waar men items opslaat en ophaalt in een hashtabel.
 Men geeft een item key als parameter en krijgt een indexlocatie van het item terug. 
 **Vb. String als parameter, telt ASCII waarden op en men neemt % tabellengte om zo een bucketId te verkrijgen**
@@ -257,7 +265,7 @@ Is het selecteren van een hashfunctie, random gekozen uit een groep hash functie
 
 ### Bespreek alle operaties die te maken hebben met de volgorde in binaire zoekbomen. 
 *Zoeken*
-O(log⁡〖n)〗		O(n)
+O(log⁡ n)		O(n)
 
 *Performantie*
 
@@ -266,10 +274,11 @@ Als de i-de sleutel wortel is  linkse deelboom bevat i-1 sleutels gem wegl
 Met die wortel is de gemi. Inwendige weglengte: D(i-1)+D(n-i)+n-1
 
 *Toevoegen*
-O(log⁡〖n)〗		O(n)
+O(log⁡ n)		O(n)
  
 *Verwijderen*
-O(log⁡〖n)〗		O(n)
+O(log⁡ n)		O(n)
+```
 Als er niet veel sleutels moeten verwijderd worden  `lazy deletion`
 1 KIND		Update parent node
 	Set node to null
@@ -282,7 +291,7 @@ GEEN KINDEREN		Zet node to null
 IS ROOT NODE		Run zelfde algoritme als hierboven
 	Update tree root node
 	Zet node to null
-
+```
 
 
 ### Bewijs de performantie van zoeken in binaire zoekbomen.
@@ -304,9 +313,11 @@ Voordeel: geen stapel meer nodig om boom in inorder te overlopen
 ## H12: Minimale overspannende bomen
 
 ### Leg het begrip MOB uit.
+
 Wortelloze boom met dezelfde knopen en met een deel van de verbindingen als takken.
 
 ### Leg het algoritme van Prim uit.
+
 1.	Lege lijst `visited`
 2.	Kies een startnode (A)
 3.	Voeg het toe aan de `visited` list
@@ -325,10 +336,10 @@ Voer zoveel mogelijk uit: Kies uit bogen G, die nog niet gekozen warden, de kors
 ## H13: Kortste afstanden
 
 ### Bespreek Dijkstra.
-Het duurt O(log⁡〖V)〗 om een vertex van de priority queue te halen. Voor elke incident edge, spenderen we O(log⁡〖V)〗
+Het duurt O(log⁡ V) om een vertex van de priority queue te halen. Voor elke incident edge, spenderen we O(log⁡ V)
  
 Algoritme van Dijkstra 
-worst-case: O(E+V log⁡〖V)〗
+worst-case: O(E+V log⁡ V)
 
 1. Alle nodes op ∞ behalve start
 2. Start node is current, andere unvisited + maak set met unvisited nodes 
@@ -369,6 +380,7 @@ int dijkstra(int from,int to)
 ### Bespreek dynamsich programmeren.
 
 ### Bespreek het algoritme van Floyd-Warshall.
+
 O(|N|^3) met N = aantal nodes van de graaf
 	Laat negatieve gewichten toe
 	In praktijk veel sneller
